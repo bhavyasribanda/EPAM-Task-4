@@ -1,4 +1,4 @@
-package EpamAss1.CleanCode;
+package EpamAss1.CleanCode2;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,16 +14,15 @@ public class App
 {
     public static void main( String[] args ) throws IOException
     {
-       SimpleAndCompoundInterest s = new SimpleAndCompoundInterest();
-       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-       BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-       double principle = Double.parseDouble(br.readLine());
-       double rateOfInterest = Double.parseDouble(br.readLine());
-       double time = Double.parseDouble(br.readLine());
-       double simpleInterest = s.calculateSimpleInterest(principle,rateOfInterest,time);
-       double compoundInterest = s.calculateCompoundInterest(principle,rateOfInterest,time);
-       bw.write("Simple Interest : " + simpleInterest + "\n");
-       bw.write("Compound Interest : " + compoundInterest + "\n");
-       bw.flush();
+        //System.out.println( "Hello World!" );
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    	double areaOfHouse = 0.0;
+    	areaOfHouse = Double.parseDouble(br.readLine());
+    	String buildingType = null;
+    	buildingType = br.readLine();
+    	BuildingHouse b = new BuildingHouse();
+    	bw.write("Total cost of building is equal to : " + b.buildingCost(areaOfHouse, buildingType));
+    	bw.flush();
     }
 }
